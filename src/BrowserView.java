@@ -6,6 +6,7 @@ public class BrowserView {
     private JTextField searchBar;
     private JEditorPane contentPanel;
     private JButton searchButton;
+    private JTextArea infoArea;
 
     public BrowserView() {
         frame = new JFrame("Illumination Browser");
@@ -27,8 +28,14 @@ public class BrowserView {
         contentPanel.setEditable(false);
 
         JScrollPane scrollPane = new JScrollPane(contentPanel);
-        scrollPane.setBounds(5, 50, 970, 700);
+        scrollPane.setBounds(5, 90, 970, 660);
         frame.add(scrollPane);
+
+        infoArea = new JTextArea();
+        infoArea.setBounds(5, 50, 970, 40);
+        infoArea.setFont(new Font("Monospaced", Font.PLAIN, 12));
+        infoArea.setEditable(false);
+        frame.add(infoArea);
 
         frame.setVisible(true);
     }
@@ -48,5 +55,9 @@ public class BrowserView {
 
     public JEditorPane getEditorPane() {
         return contentPanel;
+    }
+
+    public void setInfoText(String info) {
+        infoArea.setText(info);
     }
 }
