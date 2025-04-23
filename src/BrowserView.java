@@ -30,7 +30,7 @@ public class BrowserView {
         scrollPane.setBounds(5, 50, 970, 700);
         frame.add(scrollPane);
 
-        frame.setVisible(true); // ✅ Ensure this is present!
+        frame.setVisible(true);
     }
 
     public JTextField getTextField() {
