@@ -1,7 +1,3 @@
-Here is the plain-text version of the README you requested:
-
----
-
 # Illumination Browser
 
 ## Overview
